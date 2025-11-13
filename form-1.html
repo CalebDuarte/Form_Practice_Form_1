@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Elements Demo</title>
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .form-container {
+      width: 400px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    fieldset {
+      border: 1px solid #888;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      padding: 10px;
+    }
+
+    legend {
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      margin-top: 5px;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"],
+    input[type="range"] {
+      width: auto;
+    }
+
+    textarea {
+      height: 80px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      padding: 8px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    
+    button:hover {
+      background-color: #005f99;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Form Elements Demonstration</h1>
+
+    <form>
+      
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+        <label for="satisfaction">Satisfaction Level (0-10)</label>
+        <input type="range" id="satisfaction" name="satisfaction" min="0" max="10">
+
+        <label for="country">Country:</label>
+        <input list="countries" id="country" name="country" placeholder="Choose your country">
+        <datalist id="countries">
+          <option value="Mexico">
+          <option value="Canada">
+          <option value="United States">
+          <option value="Korea">
+          <option value="Japan">
+        </datalist>
+      </fieldset>
+
+      
+      <fieldset>
+        <legend>Gender</legend>
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+      </fieldset>
+
+      
+      <fieldset>
+        <legend>Interests</legend>
+        <label><input type="checkbox" name="interest" value="coding"> Coding</label>
+        <label><input type="checkbox" name="interest" value="music"> Music</label>
+        <label><input type="checkbox" name="interest" value="sports"> Sports</label>
+      </fieldset>
+
+      
+      <label for="role">Select Your Role:</label>
+      <select id="role" name="role" required>
+        <option value="">Choose an option</option>
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+        <option value="developer">Developer</option>
+      </select>
+
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Write your message here..."></textarea>
+
+      
+      <button type="submit">Submit Form</button>
+    </form>
+  </div>
+</body>
+</html>
