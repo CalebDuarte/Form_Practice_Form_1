@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 80px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1e90ff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0f78d4;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Student Registration Form</h2>
+        <form>
+            <label for="fullname">Full Name <span>(Alt + N)</span></label>
+            <input type="text" id="fullname" name="fullname" accesskey="n" tabindex="1" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address <span>(Alt + A)</span></label>
+            <input type="email" id="email" name="email" accesskey="a" tabindex="2" placeholder="Enter your email" required>
+
+            <label for="course">Course Name <span>(Alt + C)</span></label>
+            <input type="text" id="course" name="course" accesskey="c" tabindex="3" placeholder="Enter course name" required>
+
+            <label for="message">Message <span>(Alt + M)</span></label>
+            <textarea id="message" name="message" accesskey="m" tabindex="4" placeholder="Write your message here"></textarea>
+
+            <button type="submit" accesskey="s" tabindex="5">Submit (Alt + S)</button>
+        </form>
+    </div>
+</body>
+</html>
