@@ -1,146 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Elements Demo</title>
-  <style>
-    *{
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        *{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-    }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-    .form-container {
-      width: 400px;
-      margin: 30px auto;
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-    }
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 350px;
+        }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-    fieldset {
-      border: 1px solid #888;
-      border-radius: 5px;
-      margin-bottom: 15px;
-      padding: 10px;
-    }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
 
-    legend {
-      font-weight: bold;
-    }
+        input, textarea {
+            width: 100%;
+            padding: 8px 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
 
-    label {
-      display: block;
-      margin-top: 10px;
-    }
+        textarea {
+            resize: vertical;
+            height: 80px;
+        }
 
-    input, select, textarea {
-      width: 100%;
-      margin-top: 5px;
-      padding: 5px;
-      box-sizing: border-box;
-    }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1e90ff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-    input[type="radio"],
-    input[type="checkbox"],
-    input[type="range"] {
-      width: auto;
-    }
-
-    textarea {
-      height: 80px;
-      resize: vertical;
-    }
-
-    button {
-      width: 100%;
-      padding: 8px;
-      background-color: #007acc;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      margin-top: 10px;
-      cursor: pointer;
-    }
-
-    
-    button:hover {
-      background-color: #005f99;
-    }
-  </style>
+        button:hover {
+            background-color: #0f78d4;
+        }
+    </style>
 </head>
 <body>
-  <div class="form-container">
-    <h1>Form Elements Demonstration</h1>
+    <div class="form-container">
+        <h2>Student Registration Form</h2>
+        <form>
+            <label for="fullname">Full Name <span>(Alt + N)</span></label>
+            <input type="text" id="fullname" name="fullname" accesskey="n" tabindex="1" placeholder="Enter your full name" required>
 
-    <form>
-      
-      <fieldset>
-        <legend>Personal Information</legend>
+            <label for="email">Email Address <span>(Alt + A)</span></label>
+            <input type="email" id="email" name="email" accesskey="a" tabindex="2" placeholder="Enter your email" required>
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            <label for="course">Course Name <span>(Alt + C)</span></label>
+            <input type="text" id="course" name="course" accesskey="c" tabindex="3" placeholder="Enter course name" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required placeholder="you@example.com">
+            <label for="message">Message <span>(Alt + M)</span></label>
+            <textarea id="message" name="message" accesskey="m" tabindex="4" placeholder="Write your message here"></textarea>
 
-        <label for="satisfaction">Satisfaction Level (0-10)</label>
-        <input type="range" id="satisfaction" name="satisfaction" min="0" max="10">
-
-        <label for="country">Country:</label>
-        <input list="countries" id="country" name="country" placeholder="Choose your country">
-        <datalist id="countries">
-          <option value="Mexico">
-          <option value="Canada">
-          <option value="United States">
-          <option value="Korea">
-          <option value="Japan">
-        </datalist>
-      </fieldset>
-
-      
-      <fieldset>
-        <legend>Gender</legend>
-        <label><input type="radio" name="gender" value="male"> Male</label>
-        <label><input type="radio" name="gender" value="female"> Female</label>
-        <label><input type="radio" name="gender" value="other"> Other</label>
-      </fieldset>
-
-      
-      <fieldset>
-        <legend>Interests</legend>
-        <label><input type="checkbox" name="interest" value="coding"> Coding</label>
-        <label><input type="checkbox" name="interest" value="music"> Music</label>
-        <label><input type="checkbox" name="interest" value="sports"> Sports</label>
-      </fieldset>
-
-      
-      <label for="role">Select Your Role:</label>
-      <select id="role" name="role" required>
-        <option value="">Choose an option</option>
-        <option value="student">Student</option>
-        <option value="teacher">Teacher</option>
-        <option value="developer">Developer</option>
-      </select>
-
-      
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" placeholder="Write your message here..."></textarea>
-
-      
-      <button type="submit">Submit Form</button>
-    </form>
-  </div>
+            <button type="submit" accesskey="s" tabindex="5">Submit (Alt + S)</button>
+        </form>
+    </div>
 </body>
 </html>
